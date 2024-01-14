@@ -1,39 +1,96 @@
 import React from 'react'
+import { useState } from 'react'
 
 export const Navbar = () => {
+
+  const [desktopMenuActivated, setDesktopMenuActivated] = useState(false)
+
+  function handleMenu() {
+    setDesktopMenuActivated(prev => !prev)
+  }
+
   return (
-    <nav class="fixed top-0 w-full bg-white border-gray-200 dark:bg-gray-900">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+    <nav className="fixed top-0 w-full bg-[#D2D1D3] h-[67px] ">
+      <div className="h-full flex  items-center justify-between  mx-auto p-4 lg:px-12">
+
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./layout/logo.png" className="mix-blend-difference " alt="logo" />
         </a>
-        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-          </svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+
+        <div className='hidden md:flex md:flex-col gap-1 f-montserrat text-xs' >
+          <p className='flex items-center'>
+            <span className='icon-phone p-3 mr-2'></span>
+            Telefono: (+54 11) 4551-3550
+          </p>
+          <p className='flex items-center'>
+            <span className='icon-mail p-3 mr-2'></span>
+            Mail: ventas@stuhll.com.ar
+          </p>
+        </div>
+
+
+
+        <div className="hidden w-full md:block md:w-auto" >
+          <ul className="flex flex-col lg:gap-[40px] lg:text-lg p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0  f-montserrat font-medium">
             <li>
-              <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+              <a href='#' className=" hover:underline focus:font-semibold" onClick={handleMenu}>Productos</a>
             </li>
             <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+              <a href="/nosotros" className=" hover:underline focus:font-semibold whitespace-nowrap">Sobre Nosotros</a>
             </li>
             <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+              <a href="/trabajos" className=" hover:underline focus:font-semibold whitespace-nowrap">Trabajos Especiales</a>
             </li>
             <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-            </li>
-            <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+              <a href="/catalogo" className=" hover:underline focus:font-semibold whitespace-nowrap">Catalogo</a>
             </li>
           </ul>
         </div>
+
+        {desktopMenuActivated && <DesktopMenu />}
+
+
+
+        <button type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center md:hidden  " >
+          <span className="sr-only">Open main menu</span>
+          <svg className="w-7 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+
       </div>
-    </nav>
+    </nav >
+  )
+}
+
+
+
+
+
+function DesktopMenu() {
+  return (
+    <div className="hidden md:flex justify-center  absolute top-[67px]  right-0 bg-[#D2D1D3] h-[85px] w-[100vw]" >
+      <ul className="flex   items-center lg:gap-[50px] lg:text-lg      f-montserrat font-semibold">
+        <li>
+          <a href="/schuko" className=" hover:underline " >Linea Schuko</a>
+        </li>
+        <li>
+          <a href="/multipolares" className=" hover:underline whitespace-nowrap">Linea Multipolares</a>
+        </li>
+        <li>
+          <a href="/cajas" className=" hover:underline whitespace-nowrap">Linea Cajas</a>
+        </li>
+        <li>
+          <a href="/bases" className=" hover:underline  whitespace-nowrap">Bases Multiples</a>
+        </li>
+
+        <li>
+          <a href="/steko" className=" hover:underline whitespace-nowrap">Linea Steko</a>
+        </li>
+        <li>
+          <a href="/soldadura" className=" hover:underline whitespace-nowrap">Conector Soldadura</a>
+        </li>
+      </ul>
+    </div>
   )
 }

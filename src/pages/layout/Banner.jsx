@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Banner = () => {
   return (
-    <div>Banner</div>
+    <div className='mt-[70px]'>Banner</div>
   )
 }

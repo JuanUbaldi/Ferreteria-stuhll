@@ -1,0 +1,9 @@
+.icon-mail{
+  background-image: url('../../../public/icons/mail.svg');
+  background-repeat: no-repeat;
+}
+
+.icon-phone {
+  background-image: url('../../../public/icons/phone.svg');
+    background-repeat: no-repeat;
+}
