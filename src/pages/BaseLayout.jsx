@@ -8,7 +8,6 @@ export const BaseLayout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <Banner />
       <main>
         {children}
       </main>

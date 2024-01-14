@@ -106,7 +106,7 @@ function MobileMenu({ closeFn, state }) {
   const [subMenu, setSubMenu] = useState(false)
 
   return (
-    <section className={`sidebar ${state && 'open'} md:hidden top-0 z-50   fixed  right-[-300px] h-full w-[50%] `} >
+    <section className={`sidebar ${state && 'open'} md:hidden top-0 z-50   fixed  right-[-500px] h-full w-[50%] `} >
 
       <div className='flex justify-end p-4'>
         <button onClick={closeFn} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center " >
