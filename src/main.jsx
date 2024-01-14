@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import './index.css'
 import './utils/styles/_fonts.css'
 import './utils/styles/_icons.css'
+import './utils/styles/_layout.css'
 import { Home } from './pages/home/Home.jsx'
 import { BaseLayout } from './pages/BaseLayout'
 
