@@ -9,11 +9,10 @@ export const BaseLayout = ({ children }) => {
     <>
       <Navbar />
       <Banner />
-      <Whatsapp />
       <main>
-
         {children}
       </main>
+      <Whatsapp />
       <Footer />
 
 

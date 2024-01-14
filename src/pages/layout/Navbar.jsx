@@ -13,7 +13,7 @@ export const Navbar = () => {
 
 
   return (
-    <nav className="fixed top-0 w-full bg-[#D2D1D3] h-[67px] ">
+    <nav className="fixed z-50 top-0 w-full bg-[#D2D1D3] h-[67px] ">
       <div className="h-full flex  items-center justify-between  mx-auto p-4 lg:px-12">
 
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
