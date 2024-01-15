@@ -19,20 +19,21 @@ export const Footer = () => {
 
         <ul className='hidden md:flex md:flex-col md:ml-auto gap-4 text-lg f-montserrat font-bold '>
           <li>
-            <a href="#productos">Productos</a>
+            <a className='hover:underline' href="#productos">Productos</a>
           </li>
           <li>
-            <a href="/nosotros">Sobre Nosotros</a>
+            <a className='hover:underline' href="/nosotros">Sobre Nosotros</a>
           </li>
           <li>
-            <a href="/trabajos">Trabajos Especiales</a>
+            <a className='hover:underline' href="/trabajos">Trabajos Especiales</a>
           </li>
           <li>
-            <a href="/novedades">Novedades</a>
+            <a className='hover:underline' href="/novedades">Novedades</a>
           </li>
         </ul>
 
         <div className='flex flex-col items-center px-4 ml-auto md:gap-2 md:pr-36 justify-center'>
+
           <a href="/" >
             <img src="./layout/logo.png" className="mix-blend-difference scale-150" alt="logo" />
           </a>
@@ -53,11 +54,7 @@ export const Footer = () => {
                 <img src="./layout/instagram-icon.svg" alt="instagram" />
               </a>
             </li>
-
           </ul>
-
-
-
         </div>
 
       </section>
