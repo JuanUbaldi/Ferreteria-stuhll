@@ -8,7 +8,7 @@ export const BaseLayout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main>
+      <main className='min-h-[100vh]'>
         {children}
       </main>
       <Whatsapp />
