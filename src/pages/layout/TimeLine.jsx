@@ -7,8 +7,17 @@ const Timeline = () => {
       <div className="py-64 my-64 relative">
         <div className="event flex justify-around items-center w-full relative">
           <div className="circle bg-blue-500 w-8 h-8 md:w-12 md:h-12 rounded-full relative z-10">
-            <div className="line-perpendicular-up absolute left-1/2 top-16 transform translate-y-(-50%) w-1 h-60 bg-blue-500"></div>
+            <div className="line-perpendicular-up absolute left-1/2 top-16 transform translate-y-(-50%) w-2 h-32 bg-blue-500"></div>
+
             <div className="border-t-8 border-blue-500 w-12  absolute left-1/2 top-16 transform -translate-x-1/2"></div>
+
+            <img
+              className=" absolute top-48 right-1/5 w-40 h-20 "
+              src="./layout/elipse.svg"
+              alt=""
+            />
+            <img className=" absolute top-48 right-1/5 w-40 h-20 " src="./layout/foquito.svg" alt="" />
+
             <div className="w-80 h-80 text-lg font-medium absolute -translate-x-1/3 bottom-0">
               <h3 className="text-3xl text-center pb-2">2008</h3>
               Empresa familiar que inicia sus actividades en el año 2008 y en
@@ -19,8 +28,14 @@ const Timeline = () => {
           <div className="line absolute w-full h-1 bg-blue-500"></div>
 
           <div className="circle bg-blue-500 w-8 h-8 md:w-12 md:h-12 rounded-full relative z-10">
-            <div className="line-perpendicular-down absolute left-1/2 bottom-16 transform translate-x-(-50%) w-1 h-60 bg-blue-500"></div>
+            <div className="line-perpendicular-down absolute left-1/2 bottom-16 transform translate-x-(-50%) w-2 h-32  bg-blue-500"></div>
             <div className="border-t-8 border-blue-500 w-12  absolute left-1/2 bottom-16 transform -translate-x-1/2"></div>
+            <img
+              className=" absolute bottom-48 right-1/5 w-40 h-20 "
+              src="./layout/elipse.svg"
+              alt=""
+            />
+            <img className=" absolute bottom-48 right-1/5 w-40 h-20 " src="./layout/enchufe.svg" alt="" />
             <div className="w-80 h-80 text-lg font-medium absolute left-1/16 -translate-x-1/3 top-16 transform translate-x-(-50%)">
               Axion Conect SA, se posiciona en productos que comenzaban a
               discontinuarse, por el cierre de la importación, dando así la
@@ -31,8 +46,14 @@ const Timeline = () => {
           <div className="line absolute w-full h-1 bg-blue-500"></div>
 
           <div className="circle bg-blue-500 w-8 h-8 md:w-12 md:h-12 rounded-full relative z-10">
-            <div className="line-perpendicular-up absolute left-1/2 top-16 transform translate-y-(-50%) w-1 h-60 bg-blue-500"></div>
+            <div className="line-perpendicular-up absolute left-1/2 top-16 transform translate-y-(-50%) w-2 h-32 bg-blue-500"></div>
             <div className="border-t-8 border-blue-500 w-12  absolute left-1/2 top-16 transform -translate-x-1/2"></div>
+            <img
+              className=" absolute top-48 right-1/5 w-40 h-20 "
+              src="./layout/elipse.svg"
+              alt=""
+            />
+            <img className=" absolute top-48 right-1/5 w-40 h-20 " src="./layout/rayito.svg" alt="" />
             <div className="w-80 h-80 text-lg font-medium -translate-x-1/3 absolute left-1/2 bottom-0 transform translate-x-(-50%)">
               <h3 className="text-3xl text-center pb-2">2013</h3>
               En 2013 se consolida incorporando maquinarias y personal idóneo.
@@ -43,8 +64,14 @@ const Timeline = () => {
           <div className="line absolute w-full h-1 bg-blue-500"></div>
 
           <div className="circle bg-blue-500 w-8 h-8 md:w-12 md:h-12 rounded-full relative z-10">
-            <div className="line-perpendicular-down absolute left-1/2 bottom-16 transform translate-x-(-50%) w-1 h-60 bg-blue-500"></div>
+            <div className="line-perpendicular-down absolute left-1/2 bottom-16 transform translate-x-(-50%) w-2 h-32 bg-blue-500"></div>
             <div className="border-t-8 border-blue-500 w-12  absolute left-1/2 bottom-16 transform -translate-x-1/2"></div>
+            <img
+              className=" absolute bottom-48 right-1/5 w-40 h-20 "
+              src="./layout/elipse.svg"
+              alt=""
+            />
+            <img className=" absolute bottom-48 right-1/5 w-40 h-20 " src="./layout/brain.svg" alt="" />
             <div className="w-80 h-80 text-lg font-medium -translate-x-1/3 absolute left-1/3 top-32 transform translate-x-(-50%)">
               <h3 className="text-3xl text-center pb-2">2014</h3>
               En 2014 se han seguido agregando nuevas líneas, como multipolares

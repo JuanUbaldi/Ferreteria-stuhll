@@ -1,14 +1,18 @@
-import React from 'react'
-import { Banner } from '../layout/Banner'
-import Timeline from '../layout/TimeLine'
-
+import React from "react";
+import { Banner } from "../layout/Banner";
+import Timeline from "../layout/TimeLine";
+import ProductsHome from "../../components/ProductsHome";
 
 export const Home = () => {
   return (
     <>
       <Banner />
-      <div className='text-3xl font-black text-black'><Timeline/></div>
-      <div></div>
+      <div className="text-3xl font-black text-black">
+        <Timeline />
+      </div>
+      <div>
+        <ProductsHome />
+      </div>
     </>
-  )
-}
+  );
+};
